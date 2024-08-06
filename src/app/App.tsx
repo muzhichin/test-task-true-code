@@ -5,22 +5,8 @@ import {Cards} from "../widgets/cards";
 import {CardsRequestProvider} from "../widgets/cards/model/CardsRequestProvider.tsx";
 import {CardSelect} from "../entities/cards-select";
 import {ApiKeyInput} from "../entities/api-key-input/ui/ApiKeyInput.tsx";
-import {useEffect} from "react";
 
 function App() {
-
-    useEffect(() => {
-        const apiKey = localStorage.getItem("apiKey")
-        if (apiKey) {
-            window.API_KEY = apiKey
-        } else {
-            localStorage.setItem("apiKey", "pbPWMig0EjS9Dux8KF9ELrqsam2pRWZL")
-            alert("Был добавлен ключ запросов ограниченного пользования, " +
-                "пожалуйста добавьте свой клчю после перезагрузки...")
-            location.reload()
-        }
-
-    }, []);
 
     return <>
         <ThemeProvider>

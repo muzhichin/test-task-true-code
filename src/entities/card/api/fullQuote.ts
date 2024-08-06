@@ -2,7 +2,7 @@ import axios, {AxiosResponse} from "axios";
 import {IFullQuote} from "./types.ts";
 
 const getUrlRequest = (symbol: string) => {
-    return `https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=8642EySRM9pClNI3TWzeJj8RRyJxjWMN`
+    return `https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${window.API_KEY}`
 }
 
 

@@ -8,6 +8,10 @@
 @import "bootstrap/scss/bootstrap-grid";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+
+$pagination-bg: transparent;
+$pagination-border-color: currentColor;
+
 @import "bootstrap/scss/pagination";
 
 $input-bg: $light;
