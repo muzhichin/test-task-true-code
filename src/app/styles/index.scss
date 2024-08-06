@@ -1,0 +1,37 @@
+@import "reset.css";
+@import "mixins";
+@import "variables";
+
+@import "gerillass/scss/maps/map-for-breakpoints";
+@import "gerillass/scss/library/breakpoint";
+
+@import "bootstrap/scss/bootstrap-grid";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/pagination";
+
+$input-bg: $light;
+$input-color: $dark;
+
+$form-select-bg: $light;
+$form-select-border-color: $dark;
+
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/bootstrap-utilities";
+//@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/spinners";
+//@import "select";
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+
+[data-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.3;
+}

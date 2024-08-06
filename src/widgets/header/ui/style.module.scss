@@ -1,0 +1,27 @@
+@import "@styles/breakpoint";
+
+.Header {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  position: relative;
+  //height: 80px;
+}
+
+.Title {
+  font-size: 46px;
+  text-transform: uppercase;
+  font-weight: bold;
+  //@include breakpoint(max, $sm) {
+  //  font-size: 124px;
+  //}
+}
+
+.SwitcherWrapper {
+  width: max-content;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}

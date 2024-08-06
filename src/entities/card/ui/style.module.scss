@@ -1,0 +1,9 @@
+.Card {
+  background-color: var(--primary);
+  border-radius: 14px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  border: 1px solid currentColor;
+  row-gap: 12px;
+}

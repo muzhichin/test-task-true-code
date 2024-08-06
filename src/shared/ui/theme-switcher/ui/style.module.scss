@@ -1,0 +1,128 @@
+.SwitchToggle {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.ButtonCheck {
+  position: relative;
+  width: 90px;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.Checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+
+.SwitchBtn, .Layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.SwitchBtn {
+  z-index: 2;
+}
+
+.Layer {
+  width: 100%;
+  background-color: var(--secondary);
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+@mixin pseudo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 4px;
+  width: 30px;
+  height: 30px;
+  color: currentColor;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.ButtonCheck {
+  .SwitchBtn {
+
+    &:before {
+      @include pseudo;
+    }
+
+    &:after {
+      @include pseudo;
+    }
+  }
+}
+
+.ButtonCheck {
+  .SwitchBtn:before {
+    content: 'light';
+  }
+}
+
+.ButtonCheck {
+  .SwitchBtn:after {
+    content: 'dark';
+  }
+}
+
+.ButtonCheck {
+  .SwitchBtn:after {
+    right: -50px;
+    left: auto;
+    background-color: var(--primary);
+  }
+}
+
+.ButtonCheck {
+  .Checkbox:checked {
+    & + .SwitchBtn:before {
+      left: -50px;
+    }
+  }
+}
+
+.ButtonCheck {
+  .Checkbox:checked {
+    & + .SwitchBtn:after {
+      right: 4px;
+    }
+  }
+}
+
+.ButtonCheck {
+  .Checkbox:checked {
+    & ~ .Layer {
+      background-color: var(--secondary);
+    }
+  }
+}
